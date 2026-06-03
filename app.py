@@ -3,18 +3,14 @@ Anime Recommender System — Streamlit App
 Two approaches: Content-Based Filtering & Collaborative Filtering
 """
 
-import sys
-import os
-sys.path.insert(0, os.path.dirname(__file__))
-
 import streamlit as st
 import pandas as pd
 import numpy as np
 
-from utils.data_loader import load_data, get_all_genres, get_all_types, get_anime_names
-from models.content_based import ContentBasedRecommender
-from models.collaborative import CollaborativeFilteringRecommender
-from utils.evaluation import compare_recommendations, genre_distribution
+from data_loader import load_data, get_all_genres, get_all_types, get_anime_names
+from content_based import ContentBasedRecommender
+from collaborative import CollaborativeFilteringRecommender
+from evaluation import compare_recommendations, genre_distribution
 
 # ─── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(

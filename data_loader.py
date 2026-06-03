@@ -14,7 +14,7 @@ import numpy as np
 import streamlit as st
 
 # ── paths ──────────────────────────────────────────────────────────────────────
-_HERE = os.path.dirname(os.path.dirname(__file__))
+_HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE_DIR = os.path.join(_HERE, ".data_cache")
 
 # Hugging Face raw URLs (CSV files in the dataset repository)
